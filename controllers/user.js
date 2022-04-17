@@ -11,7 +11,7 @@ function signup(req, res) {
         .then(result => {
             res.status(201).json({ message: "User created" });
         })
-        .catch(err => res.status(400).json({ err }));
+        .catch(err => res.status(400).json({ message: err.message }));
 }
 
 function login(req, res) {

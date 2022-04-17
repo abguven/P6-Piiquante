@@ -1,0 +1,71 @@
+# USER ROUTES
+
+
+# SIGNUP
+POST http://localhost:3000/api/auth/signup
+content-type: application/json
+
+{
+    "email": "abguven@yahoo.es",
+    "password": "123456"
+}
+###
+
+
+# LOGIN
+POST http://localhost:3000/api/auth/login
+content-type: application/json
+
+{
+    "email": "abguven@yahoo.es",
+    "password": "123456"
+}
+###
+
+# SAUCE ROUTES
+
+#GET ALL SAUCES
+GET http://localhost:3000/api/sauces/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
+Content-Type: application/json
+
+{
+    "userId": "625b598c85d837b2b90f64a1"
+}
+###
+
+
+#GET ONE SAUCE BY ID
+GET http://localhost:3000/api/sauces/625b8321aa742e8af928d90d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
+Content-Type: application/json
+
+{
+    "userId": "625b598c85d837b2b90f64a1"
+}
+###
+
+
+
+#DELETE SAUCE
+DELETE http://localhost:3000/api/sauces/:id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
+Content-Type: application/json
+
+{
+}
+###
+
+
+#LIKE SAUCE
+POST http://localhost:3000/api/sauces/:id/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
+Content-Type: application/json
+
+{
+}
+###
+
+
+
+#router.put("/:id", multer, sauceController.modifiySauce);

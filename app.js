@@ -6,6 +6,7 @@ require('dotenv').config({ path: ".env.development" });
 
 
 const userRoutes = require('./routes/user');
+const sauceRoutes = require('./routes/sauce');
 
 
 const app = express();
@@ -33,6 +34,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // user routes
 app.use("/api/auth", userRoutes);
+
+// sauce routes
+app.use("/api/sauces",sauceRoutes)
 
 //module.exports = app;
 
