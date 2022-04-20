@@ -17,7 +17,7 @@ POST http://localhost:3000/api/auth/login
 content-type: application/json
 
 {
-    "email": "abguven@yahoo.es",
+    "email": "user1@mail.com",
     "password": "123456"
 }
 ###
@@ -26,11 +26,11 @@ content-type: application/json
 
 #GET ALL SAUCES
 GET http://localhost:3000/api/sauces/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjVjOGZhYTBmYzE5MjRmOThmYTc5MzAiLCJpYXQiOjE2NTAyMzMzMzUsImV4cCI6MTY1MDMxOTczNX0.jtAj1mVzU9fabndFTiaxh4ER2afRUR5X9R0paR2YD3Y
 Content-Type: application/json
 
 {
-    "userId": "625b598c85d837b2b90f64a1"
+    "userId": ""
 }
 ###
 
@@ -48,8 +48,8 @@ Content-Type: application/json
 
 
 #DELETE SAUCE
-DELETE http://localhost:3000/api/sauces/:id
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
+DELETE http://localhost:3000/api/sauces/626060ac4c9a48d8722f4997
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjVjOGZhYTBmYzE5MjRmOThmYTc5MzAiLCJpYXQiOjE2NTA0ODMwOTQsImV4cCI6MTY1MDU2OTQ5NH0.piVZ8O2iqwQHNUyELdzriWBJ3ZeRWVOZd4RlWAp5k14
 Content-Type: application/json
 
 {
@@ -58,11 +58,13 @@ Content-Type: application/json
 
 
 #LIKE SAUCE
-POST http://localhost:3000/api/sauces/:id/like
+POST http://localhost:3000/api/sauces/625c0d0017d27cd9c02e5965/like
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjViNTk4Yzg1ZDgzN2IyYjkwZjY0YTEiLCJpYXQiOjE2NTAxNTM5OTYsImV4cCI6MTY1MDI0MDM5Nn0.2L5CCmSUnZV6myTl0JjMGfSQeleKTyFN3-Rj7prJXSo
 Content-Type: application/json
 
 {
+    "userId" :"625b8273aa742e8af928d907",
+    "like" : -1
 }
 ###
 

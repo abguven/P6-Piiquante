@@ -11,9 +11,9 @@ const multer = require('../middlewares/multer-config');
 router.get("/", auth, sauceController.getAll);
 router.get("/:id", auth, sauceController.getOne);
 
-router.post("/", multer, sauceController.newSauce);
-router.put("/:id", multer, sauceController.modifiySauce);
-router.delete("/:id", sauceController.deleteSauce);
-router.post("/:id/like",sauceController.likeSauce);
+router.post("/", multer, auth, sauceController.newSauce);
+router.put("/:id", multer, auth, sauceController.modifiySauce);
+router.delete("/:id",  auth, sauceController.deleteSauce);
+router.post("/:id/like", auth, sauceController.likeSauce);
 
 module.exports = router;
